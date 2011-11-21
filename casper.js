@@ -641,7 +641,7 @@
                 this.log("Execution timeout set to " + this.options.timeout + 'ms', "info");
                 setTimeout(function(self) {
                     if (isType(self.options.onTimeout, "function")) {
-                        self.options.onTimeout(self);
+                        self.options.onTimeout(self, location);
                     } else {
                         self.die("Timeout of " + self.options.timeout + "ms exceeded, exiting.");
                     }
